@@ -20,7 +20,7 @@ def encode(
 ) -> str:
     base_length = len(base)
     if decoded_int < base_length:
-        return base.index(decoded_int)
+        return base[decoded_int]
     encoded = ""
     while decoded_int:
         decoded_int, remainder = divmod(decoded_int, base_length)
