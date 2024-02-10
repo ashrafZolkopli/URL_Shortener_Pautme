@@ -17,8 +17,5 @@ def base_encode(decoded_int: int, base: str = ascii_lowercase + "234567", *args,
     encoded = ""
     while decoded_int:
         decoded_int, remainder = divmod(decoded_int, base_length)
-        encoded += base.index(remainder)
-
+        encoded = base[remainder] + encoded
     return encoded
-
-
